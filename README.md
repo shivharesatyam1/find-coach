@@ -20,7 +20,7 @@ yarn build
 yarn lint
 ```
 
-#About App
+### About App
 
 This is very basic Vuejs based app, This app coverd basic and some advance important topic of Vuejs like..
 
