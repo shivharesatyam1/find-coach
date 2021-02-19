@@ -35,3 +35,4 @@ This is very basic Vuejs based app, This app coverd basic and some advance impor
         -> Rendering Loading Spinner
         -> Http Error Handling
         -> Authentication (signin, signup, logout)
+        -> Async Components for optimizing the performance
