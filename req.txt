@@ -1,0 +1,2 @@
+yarn add vue-router
+yarn add vuex

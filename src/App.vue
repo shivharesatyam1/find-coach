@@ -1,0 +1,47 @@
+<template>
+    <div>
+        <the-header></the-header>
+        <router-view></router-view>
+    </div>
+</template>
+
+<script>
+import TheHeader from './components/layout/TheHeader.vue';
+export default {
+    components: {
+        TheHeader
+    },
+    computed: {
+      didAutoLogout() {
+        return this.$store.getters.didAutoLogout;
+      }
+    },
+    created() {
+      this.$store.dispatch('makeUserLogin');
+    },
+    // redirect the user if auto logout happen
+    watch: {
+      didAutoLogout(curValue, oldValue) {
+        if (curValue && curValue !== oldValue) {
+          this.$router.replace('/coaches');
+        }
+      }
+    }
+}
+</script>
+
+<style>
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+</style>
